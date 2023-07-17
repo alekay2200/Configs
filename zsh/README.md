@@ -4,7 +4,7 @@ Configuracion de la zsh para MacOS
 escribir en el fichero **.zshrc**
 ```console
 PROMPT='%B%F{51}%n@%f%b %1~ $ '
-RPROMPT="%F{111}[%D{%f/%m/%y}|%@]"
+RPROMPT="%F{111}[%D{%f/%m/%y}|%T]"
 
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
