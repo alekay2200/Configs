@@ -5,6 +5,10 @@ vim.cmd.source(vimrc)
 require("mason").setup()
 require("mason-lspconfig").setup()
 
+-- Other file explorer and icons
+-- require("plugins.nvim-tree")
+-- require("plugins.nvim-web-devicons")
+
 -- Rust --
 local rt = require("rust-tools")
 

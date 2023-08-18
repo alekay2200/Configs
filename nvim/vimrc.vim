@@ -26,14 +26,26 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'simrat39/rust-tools.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'ryanoasis/vim-devicons'
+
+" -- Another file explorer and icons
+" Plug 'nvim-tree/nvim-tree.lua'
+" Plug 'nvim-tree/nvim-web-devicons'
 
 set encoding=UTF-8
 
 call plug#end()
 
+" Color scheme
+" colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme catppuccin-macchiato 
+
 " ---- NerdTree ----
 " Disable NerdTree when nvim start.
 " autocmd VimEnter * NERDTree
+" autocmd VimEnter * NvimTree
+" noremap <leader>d :NvimTreeToggle<CR>
 noremap <leader>d :NERDTreeToggle<CR>
 map <C-j> <C-W>j
 map <C-k> <C-W>k

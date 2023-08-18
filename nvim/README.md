@@ -9,6 +9,17 @@ Once you have nvim installed and the configuration copied, open an empty nvim wi
 PlugInstall
 ```
 
+### Nerd fonts
+Install nerd fonts are required to show the icons properly
+
+```console
+brew tap homebrew/cask-fonts
+```
+
+```console
+brew install --cask font-hack-nerd-font
+```
+
 ### Rust
 
 - rust-analyzer
