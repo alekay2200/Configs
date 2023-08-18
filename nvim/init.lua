@@ -2,16 +2,13 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
-require("mason").setup()
-require("mason-lspconfig").setup()
-
--- Other file explorer and icons
--- require("plugins.nvim-tree")
--- require("plugins.nvim-web-devicons")
+-- Load all plugins
+-- require("plugins")
+require("plugins.lsp_config")
+require("plugins.completions")
 
 -- Rust --
 local rt = require("rust-tools")
-
 rt.setup({
   server = {
     on_attach = function(_, bufnr)
