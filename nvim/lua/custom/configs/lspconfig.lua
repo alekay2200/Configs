@@ -19,6 +19,7 @@ end
 -- lspconfig.pyright.setup { blabla}
 
 -- lspconfig for rust
+-- I'm using rusts-tool whichs interfer with the rust-analyzer config
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
   capabilities = capabilities,
