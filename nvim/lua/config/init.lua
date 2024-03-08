@@ -2,6 +2,7 @@
 require("config.global")
 require("config.options")
 require("config.keymap")
+require("config.commands")
 
 local T = require("themes.init")
 local P = require("plugins.init")
