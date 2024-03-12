@@ -7,3 +7,11 @@ Repositorio para guardar las configuraciones de mis programas
 ```console
 bew install --cask font-caskaydia-cove-nerd-font
 ```
+
+## Install lazygit
+```console
+brew install lazygit
+```
+
+### Lazygit themes
+[catppuccin](https://github.com/catppuccin/lazygit/tree/main)
