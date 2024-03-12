@@ -5,4 +5,4 @@ local current_theme = catppuccin
 return {
     themes = themes,
     current_theme = current_theme
-} 
+}

@@ -20,8 +20,8 @@ local config = function()
 			"dockerfile",
 			"gitignore",
 			"python",
-      "rust",
-      "go"
+			"rust",
+			"go"
 		},
 		auto_install = true,
 		highlight = {

@@ -1,7 +1,6 @@
 -- Make sure to set `mapleader` before lazy so your mappings are correct 
 require("config.global")
 require("config.options")
-require("config.keymap")
 require("config.commands")
 
 local T = require("themes.init")
@@ -50,3 +49,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(plugins, opts)
+
+-- This file contains keymaps for telescop plugin, we need to make sure that telescope is install after
+-- executing this script file
+require("config.keymap")
