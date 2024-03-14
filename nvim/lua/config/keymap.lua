@@ -12,6 +12,13 @@ keymap.set("n", "<C-l>", "<C-w>l", { noremap = false, silent = true })
 keymap.set("n", '<S-h>', '<cmd>-tabnext<cr>', { silent = true })
 keymap.set("n", '<S-l>', '<cmd>+tabnext<cr>', { silent = true })
 
+-- Terminal mode
+keymap.set("t", '<C-t>', '<C-\\><C-n>', { silent = true })
+-- keymap.set("t", '<leader>g', '<cmd>LazyGit<CR>', { silent = true })
+keymap.set("n", "<leader>g", "<cmd>LazyGit<CR>", {noremap = true, silent = true})
+keymap.set("n", "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true})
+keymap.set("t", "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true})
+
 -- buffers 
 -- keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
 -- keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })

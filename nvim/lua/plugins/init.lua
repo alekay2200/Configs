@@ -7,6 +7,8 @@ local telescope = require("plugins.telescope")
 local gitsigns = require("plugins.gitsigns")
 local fugitive = require("plugins.fugitive")
 local cmp = require("plugins.cmp")
+local toggleterm = require("plugins.toggleterm")
+local lazygit = require("plugins.lazygit")
 
 local plugins = {
   nvim_tree,
@@ -17,7 +19,9 @@ local plugins = {
   telescope,
   gitsigns,
   fugitive,
-  cmp
+  cmp,
+  toggleterm,
+  lazygit
 }
 
 return plugins
