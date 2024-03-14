@@ -16,7 +16,7 @@ local opts = {
     -- install missing plugins on startup. This doesn't increase startup time.
     missing = true,
     -- try to load one of these colorschemes when starting an installation during startup
-    colorscheme = { T.current_theme.name },
+    colorscheme = { T.current_theme },
   },
 
   change_detection = {
@@ -53,3 +53,6 @@ require("lazy").setup(plugins, opts)
 -- This file contains keymaps for telescop plugin, we need to make sure that telescope is install after
 -- executing this script file
 require("config.keymap")
+
+-- Set theme
+vim.cmd("colorscheme " .. T.current_theme)

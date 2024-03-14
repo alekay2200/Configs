@@ -173,9 +173,11 @@ local opts = {
   },
 }
 
+
 return {
   "simrat39/rust-tools.nvim",
   event = { "BufReadPost *.rs" },
+  dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
   config = function()
     require('rust-tools').setup(opts)
   end

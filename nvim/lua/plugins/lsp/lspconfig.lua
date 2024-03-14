@@ -20,7 +20,8 @@ return {
           "tsserver",
           "pyright",
           "gopls",
-          "terraformls"
+          "terraformls",
+          "clangd", -- for C and C++
         }
       })
     end
@@ -29,14 +30,25 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = false,
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp"
+    },
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
-      lspconfig.pyright.setup({})
-      lspconfig.gopls.setup({})
-      lspconfig.terraformls.setup({})
-    end
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+      local opts = {
+        capabilities = capabilities
+      }
+
+      lspconfig.lua_ls.setup(opts)
+      lspconfig.tsserver.setup(opts)
+      lspconfig.pyright.setup(opts)
+      lspconfig.gopls.setup(opts)
+      lspconfig.terraformls.setup(opts)
+      lspconfig.rust_analyzer.setup(opts)
+      lspconfig.clangd.setup(opts)
+    end,
   },
 
   rust_tools

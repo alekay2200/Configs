@@ -8,6 +8,14 @@ keymap.set("n", "<C-j>", "<C-w>j", { noremap = false, silent = true })
 keymap.set("n", "<C-k>", "<C-w>k", { noremap = false, silent = true })
 keymap.set("n", "<C-l>", "<C-w>l", { noremap = false, silent = true })
 
+-- Tabs
+keymap.set("n", '<S-h>', '<cmd>-tabnext<cr>', { silent = true })
+keymap.set("n", '<S-l>', '<cmd>+tabnext<cr>', { silent = true })
+
+-- buffers 
+-- keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
+-- keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
+
 -- Movement
 keymap.set("v", '<S-k>', ':move \'<-2<CR>gv-gv', { noremap = true, silent = true })
 keymap.set("v", '<S-j>', ':move \'>+1<CR>gv-gv', { noremap = true, silent = true })
