@@ -17,11 +17,18 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "tsserver",
+          "tsserver", -- JavaScript and TypeScript
+          "html",
           "pyright",
           "gopls",
           "terraformls",
           "clangd", -- for C and C++
+          "cmake", -- Make
+          "dockerls",
+          "jsonls",
+          "marksman", -- Markdown
+          "tailwindcss",
+          "bashls"
         }
       })
     end
@@ -43,11 +50,19 @@ return {
 
       lspconfig.lua_ls.setup(opts)
       lspconfig.tsserver.setup(opts)
+      lspconfig.html.setup(opts)
       lspconfig.pyright.setup(opts)
       lspconfig.gopls.setup(opts)
       lspconfig.terraformls.setup(opts)
       lspconfig.rust_analyzer.setup(opts)
       lspconfig.clangd.setup(opts)
+      lspconfig.cmake.setup(opts)
+      lspconfig.CMake.setup(opts)
+      lspconfig.dockerls.setup(opts)
+      lspconfig.jsonls.setup(opts)
+      lspconfig.marksman.setup(opts)
+      lspconfig.tailwindcss.setup(opts)
+      lspconfig.bashls.setup(opts)
     end,
   },
 
