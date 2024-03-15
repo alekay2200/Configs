@@ -6,7 +6,7 @@ opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
 opt.smartindent = true
-opt.wrap = false
+opt.wrap = true
 
 -- Cursor
 opt.guicursor =
@@ -20,7 +20,7 @@ opt.hlsearch = false
 
 -- Appearance
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.termguicolors = true
 opt.colorcolumn = "100"
 opt.signcolumn = "yes"

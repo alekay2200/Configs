@@ -9,6 +9,7 @@ local fugitive = require("plugins.fugitive")
 local cmp = require("plugins.cmp")
 local toggleterm = require("plugins.toggleterm")
 local lazygit = require("plugins.lazygit")
+local bufferline = require("plugins.bufferline")
 
 local plugins = {
   nvim_tree,
@@ -21,7 +22,8 @@ local plugins = {
   fugitive,
   cmp,
   toggleterm,
-  lazygit
+  lazygit,
+  bufferline 
 }
 
 return plugins

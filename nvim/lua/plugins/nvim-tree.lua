@@ -19,8 +19,13 @@ return {
             group_empty = true,
           },
           filters = {
-            dotfiles = true,
+            dotfiles = false,
           },
+        actions = {
+          open_file = {
+            quit_on_open = true
+          }
+        },
       }
     end,
 }

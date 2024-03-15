@@ -54,3 +54,9 @@ api.nvim_create_user_command(
     surround_delete,
     { nargs = 1 }
 )
+
+-- `BufferLineCloseRight` - close all visible buffers to the right of the
+--   current buffer
+-- * `BufferLineCloseLeft` - close all visible buffers to the left of the current
+--   buffer
+-- * `BufferLineCloseOthers` - close all other visible buffers

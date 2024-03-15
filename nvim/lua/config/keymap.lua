@@ -2,15 +2,28 @@ local keymap = vim.keymap
 local lsp = vim.lsp
 local builtin = require('telescope.builtin')
 
--- Window movement
+-- Window --
+-- movement
 keymap.set("n", "<C-h>", "<C-w>h", { noremap = false, silent = true })
 keymap.set("n", "<C-j>", "<C-w>j", { noremap = false, silent = true })
 keymap.set("n", "<C-k>", "<C-w>k", { noremap = false, silent = true })
 keymap.set("n", "<C-l>", "<C-w>l", { noremap = false, silent = true })
 
+-- split
+keymap.set("n", "<leader>vs", "<cmd>vertical split<CR>", { noremap = false, silent = true })
+
 -- Tabs
-keymap.set("n", '<S-h>', '<cmd>-tabnext<cr>', { silent = true })
-keymap.set("n", '<S-l>', '<cmd>+tabnext<cr>', { silent = true })
+-- keymap.set("n", '<S-h>', '<cmd>-tabnext<cr>', { silent = true })
+-- keymap.set("n", '<S-l>', '<cmd>+tabnext<cr>', { silent = true })
+
+-- Buffers
+keymap.set("n", '<S-h>', '<cmd>bprev<cr>', { silent = true })
+keymap.set("n", '<S-l>', '<cmd>bnext<cr>', { silent = true })
+keymap.set("n", '<leader>q', '<cmd>bdelete<CR>', { noremap = true, silent = true }) -- close current buffer
+keymap.set("n", '<leader>ql', '<cmd>BufferLineCloseLeft<CR>', { noremap = true, silent = true }) -- close current buffer
+keymap.set("n", '<leader>qr', '<cmd>BufferLineCloseRight<CR>', { noremap = true, silent = true }) -- close current buffer
+-- keymap.set("n", '<S-l>', '<cmd>BufferModeNext<cr>', { silent = true })
+-- keymap.set("n", '<S-l>', '<cmd>BufferModePrev<cr>', { silent = true })
 
 -- Terminal mode
 keymap.set("t", '<C-t>', '<C-\\><C-n>', { silent = true })
