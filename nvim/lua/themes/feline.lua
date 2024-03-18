@@ -360,7 +360,7 @@ local function feline_catppuccin()
 
     local feline = require("feline")
 
-    -- feline.winbar.setup({}) -- Not show file name on top left corner (bufferline already shows the name of the file)
+    -- feline.winbar.setup({})
     -- feline.statuscolumn.setup()
 
     feline.setup({

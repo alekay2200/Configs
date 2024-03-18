@@ -1,6 +1,5 @@
 local opts = {
   tools = { -- rust-tools options
-
     -- how to execute terminal commands
     -- options right now: termopen / quickfix / toggleterm / vimux
     -- executor = require("rust-tools.executors").termopen,
@@ -172,7 +171,6 @@ local opts = {
     },
   },
 }
-
 
 return {
   "simrat39/rust-tools.nvim",

@@ -1,9 +1,16 @@
 local catppuccin = require("themes.catppuccin")
 local nightfox = require("themes.nightfox")
 local feline = require("themes.feline")
+local onedark = require("themes.onedark")
 
-local themes = { catppuccin, nightfox, feline }
-local current_theme = "catppuccin-mocha"
+-- disabling themes that are not going to be used
+catppuccin.lazy = false
+nightfox.lazy = true
+
+
+local themes = { catppuccin, nightfox, feline, onedark }
+-- local current_theme = "catppuccin-mocha"
+local current_theme = "onedark"
 
 return {
     themes = themes,
