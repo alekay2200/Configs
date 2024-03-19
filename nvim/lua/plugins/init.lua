@@ -10,6 +10,7 @@ local cmp = require("plugins.cmp")
 local toggleterm = require("plugins.toggleterm")
 local lazygit = require("plugins.lazygit")
 local bufferline = require("plugins.bufferline")
+local vim_visual_multi = require("plugins.vim_visual_multi")
 
 local plugins = {
   nvim_tree,
@@ -23,7 +24,8 @@ local plugins = {
   cmp,
   toggleterm,
   lazygit,
-  bufferline 
+  bufferline,
+  vim_visual_multi
 }
 
 return plugins

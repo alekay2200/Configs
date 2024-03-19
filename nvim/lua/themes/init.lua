@@ -4,7 +4,7 @@ local feline = require("themes.feline")
 local onedark = require("themes.onedark")
 
 -- disabling themes that are not going to be used
-catppuccin.lazy = false 
+catppuccin.lazy = false
 nightfox.lazy = true
 
 
