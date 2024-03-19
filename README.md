@@ -13,5 +13,11 @@ bew install --cask font-caskaydia-cove-nerd-font
 brew install lazygit
 ```
 
+## Install Rust Analyzer
+In order to get rust lsp tools
+```console
+brew install rust-analyzer
+```
+
 ### Lazygit themes
 [catppuccin](https://github.com/catppuccin/lazygit/tree/main)
