@@ -377,7 +377,7 @@ local function default()
 end
 
 return {
-  'freddiehaddad/feline.nvim/',
+  "/freddiehaddad/feline.nvim",
   lazy = false,
   dependencies = {
     "gitsigns.nvim",
