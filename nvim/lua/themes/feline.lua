@@ -377,11 +377,11 @@ local function default()
 end
 
 return {
-  "/freddiehaddad/feline.nvim",
+  "freddiehaddad/feline.nvim",
   lazy = false,
   dependencies = {
     "gitsigns.nvim",
     "nvim-web-devicons",
   },
-  config = feline_catppuccin 
+  config = feline_catppuccin
 }

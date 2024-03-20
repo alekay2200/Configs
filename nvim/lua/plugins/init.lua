@@ -11,6 +11,7 @@ local toggleterm = require("plugins.toggleterm")
 local lazygit = require("plugins.lazygit")
 local bufferline = require("plugins.bufferline")
 local vim_visual_multi = require("plugins.vim_visual_multi")
+local align = require("plugins.align")
 
 local plugins = {
   nvim_tree,
@@ -25,7 +26,8 @@ local plugins = {
   toggleterm,
   lazygit,
   bufferline,
-  vim_visual_multi
+  vim_visual_multi,
+  align
 }
 
 return plugins
