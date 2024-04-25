@@ -3,6 +3,7 @@ local lsp = vim.lsp
 local builtin = require('telescope.builtin')
 local dap = require("dap")
 local diagnostic = vim.diagnostic
+local dap_python = require("dap-python")
 
 -- Window --
 -- movement
@@ -73,6 +74,8 @@ keymap.set('n', '<leader>fg', builtin.live_grep, {})
 keymap.set("n", "<leader>n", diagnostic.goto_next, {})
 keymap.set("n", "<leader>b", diagnostic.goto_prev, {})
 
--- DAP (debuger adapt protocol)
+-- -- DAP (debuger adapt protocol)
 keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
 keymap.set("n", "<leader>dc", dap.continue, {})
+-- Python 
+keymap.set("n", "<leader>ds", dap_python.debug_selection, {})

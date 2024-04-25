@@ -6,11 +6,16 @@ return {
   dependencies = {
     "mfussenegger/nvim-dap",
     "nvim-neotest/nvim-nio",
-    "leoluz/nvim-dap-go" -- Debbuger for GO
+    "leoluz/nvim-dap-go",          -- Debbuger for GO
+    "mfussenegger/nvim-dap-python" -- Debbuger for Python
   },
   lazy = false,
   config = function()
     require("dap-go").setup()
+
+    local dap_python = require("dap-python")
+    dap_python.setup("~/.virtualenvs/debugpy/bin/python")
+    dap_python.test_runner = "unittest"
 
     local dap, dapui = require("dap"), require("dapui")
 

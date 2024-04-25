@@ -13,6 +13,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
+    dependencies = { "mason-org/mason-registry" },
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
@@ -28,7 +29,8 @@ return {
           "jsonls",
           "marksman", -- Markdown
           "tailwindcss",
-          "bashls"
+          "bashls",
+          "rust_analyzer"
         }
       })
     end
@@ -64,6 +66,37 @@ return {
       lspconfig.tailwindcss.setup(opts)
       lspconfig.bashls.setup(opts)
     end,
+  },
+
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    lazy = false,
+    config = function()
+     require ('mason-nvim-dap').setup({
+      -- Available adapters
+      -- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
+      ensure_installed = { "python", "delve", "codelldb" },
+      handlers = {
+          function(config)
+            -- all sources with no handler get passed here
+
+            -- Keep original functionality
+            require('mason-nvim-dap').default_setup(config)
+          end,
+          -- python = function(config)
+          --     config.adapters = {
+          --       type = "executable",
+          --       command = "/usr/bin/python3",
+          --       args = {
+          --         "-m",
+          --         "debugpy.adapter",
+          --       },
+          --     }
+          --     require('mason-nvim-dap').default_setup(config) -- don't forget this!
+          -- end,
+      },
+    })
+    end
   },
 
   rust_tools
