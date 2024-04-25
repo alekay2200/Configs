@@ -163,19 +163,20 @@ local opts = {
   }, -- rust-analyzer options
 
   -- debugging stuff
-  dap = {
-    adapter = {
-      type = "executable",
-      command = "lldb-vscode",
-      name = "rt_lldb",
-    },
-  },
+  -- dap = {
+  --   adapter = {
+  --     type = "executable",
+  --     command = "lldb-vscode",
+  --     name = "rt_lldb",
+  --   },
+  -- },
 }
 
 return {
   "simrat39/rust-tools.nvim",
   event = { "BufReadPost *.rs" },
-  dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
+  -- dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
+  dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require('rust-tools').setup(opts)
   end

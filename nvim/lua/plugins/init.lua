@@ -12,6 +12,7 @@ local lazygit = require("plugins.lazygit")
 local bufferline = require("plugins.bufferline")
 local vim_visual_multi = require("plugins.vim_visual_multi")
 local align = require("plugins.align")
+local debug = require("plugins.debug")
 
 local plugins = {
   nvim_tree,
@@ -27,7 +28,8 @@ local plugins = {
   lazygit,
   bufferline,
   vim_visual_multi,
-  align
+  align,
+  debug
 }
 
 return plugins

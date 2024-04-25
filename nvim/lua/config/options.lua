@@ -1,4 +1,9 @@
 local opt = vim.opt
+local fn = vim.fn
+local api = vim.api
+local diagnostic = vim.diagnostic
+local o = vim.o
+local cmd = vim.cmd
 
 -- Tabs / Indentation
 opt.tabstop = 2
@@ -44,3 +49,26 @@ opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
+
+-- Diagnostics --
+-- To disable inline text, and do a diagnostic window on hover
+diagnostic.config({
+  virtual_text = false
+})
+
+-- Show line diagnostics automatically in hover window
+o.updatetime = 250
+cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+
+-- Breackpoint
+api.nvim_create_autocmd("ColorScheme", {
+	pattern = "*",
+	desc = "prevent colorscheme clears self-defined DAP icon colors.",
+	callback = function()
+		api.nvim_set_hl(0, 'DapBreakpoint', { ctermbg = 0, fg = '#c4751a' })
+		api.nvim_set_hl(0, 'DapLogPoint', { ctermbg = 0, fg = '#61afef' })
+		api.nvim_set_hl(0, 'DapStopped', { ctermbg = 0, fg = '#98c379' })
+	end
+})
+fn.sign_define('DapBreakpoint', {text='', texthl='red', linehl='DapBreakpoint', numhl='DapBreakpoint'})

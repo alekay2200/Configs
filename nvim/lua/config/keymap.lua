@@ -1,6 +1,8 @@
 local keymap = vim.keymap
 local lsp = vim.lsp
 local builtin = require('telescope.builtin')
+local dap = require("dap")
+local diagnostic = vim.diagnostic
 
 -- Window --
 -- movement
@@ -19,7 +21,7 @@ keymap.set("n", "<leader>vs", "<cmd>vertical split<CR>", { noremap = false, sile
 -- Buffers
 keymap.set("n", '<S-h>', '<cmd>bprev<cr>', { silent = true })
 keymap.set("n", '<S-l>', '<cmd>bnext<cr>', { silent = true })
-keymap.set("n", '<leader>q', '<cmd>bdelete<CR>', { noremap = true, silent = true }) -- close current buffer
+keymap.set("n", '<leader>qb', '<cmd>bdelete<CR>', { noremap = true, silent = true }) -- close current buffer
 keymap.set("n", '<leader>ql', '<cmd>BufferLineCloseLeft<CR>', { noremap = true, silent = true }) -- close current buffer
 keymap.set("n", '<leader>qr', '<cmd>BufferLineCloseRight<CR>', { noremap = true, silent = true }) -- close current buffer
 -- keymap.set("n", '<S-l>', '<cmd>BufferModeNext<cr>', { silent = true })
@@ -41,7 +43,7 @@ keymap.set("v", '<S-k>', ':move \'<-2<CR>gv-gv', { noremap = true, silent = true
 keymap.set("v", '<S-j>', ':move \'>+1<CR>gv-gv', { noremap = true, silent = true })
 
 -- File explorer
-keymap.set("n", "<leader>d", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>dd", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 -- Comments
 -- Not working I dont know why :)
@@ -65,3 +67,12 @@ keymap.set("n", "<leader>ca", lsp.buf.code_action, {})
 -- Telescope keymaps
 keymap.set('n', '<leader>ff', builtin.find_files, {})
 keymap.set('n', '<leader>fg', builtin.live_grep, {})
+
+-- Diagnostic
+-- go to next error/warning/hint
+keymap.set("n", "<leader>n", diagnostic.goto_next, {})
+keymap.set("n", "<leader>b", diagnostic.goto_prev, {})
+
+-- DAP (debuger adapt protocol)
+keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
+keymap.set("n", "<leader>dc", dap.continue, {})

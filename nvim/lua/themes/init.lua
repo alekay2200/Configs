@@ -14,5 +14,5 @@ local current_theme = "onedark"
 
 return {
     themes = themes,
-    current_theme = current_theme
+    current_theme = current_theme,
 }

@@ -1,3 +1,4 @@
+-- To use web devicons
 return {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -29,3 +30,31 @@ return {
       }
     end,
 }
+
+-- -- -- To use material icons
+-- return {
+--   'DaikyXendo/nvim-tree.lua',
+--   dependencies = {
+--     'DaikyXendo/nvim-material-icon', -- optional, for file icons
+--   },
+--   lazy = false,
+--   config = function()
+--     require("nvim-tree").setup({
+--       sort_by = "case_sensitive",
+--       view = {
+--         adaptive_size = true,
+--         mappings = {
+--           list = {
+--             { key = "u", action = "dir_up" },
+--           },
+--         },
+--       },
+--       renderer = {
+--         group_empty = true,
+--       },
+--       filters = {
+--         dotfiles = true,
+--       },
+--     })
+--   end
+-- }
