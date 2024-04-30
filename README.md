@@ -13,11 +13,13 @@ bew install --cask font-caskaydia-cove-nerd-font
 brew install lazygit
 ```
 
-## Install Rust Analyzer
-In order to get rust lsp tools
-```console
-brew install rust-analyzer
-```
+Run debugger on cargo project
+- Set breakpoint <leader>db
+- go to main <leader>k and select debug
+
+Run debugger for go and python
+- Set breakpoint <leader>db
+- start debuggin <leader>dc
 
 ### Lazygit themes
 [catppuccin](https://github.com/catppuccin/lazygit/tree/main)

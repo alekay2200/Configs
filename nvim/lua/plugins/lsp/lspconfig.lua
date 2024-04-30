@@ -75,7 +75,7 @@ return {
      require ('mason-nvim-dap').setup({
       -- Available adapters
       -- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
-      ensure_installed = { "python", "delve", "codelldb" },
+      ensure_installed = { "python", "delve", "codelldb" }, -- python, go, rust (debuggers)
       handlers = {
           function(config)
             -- all sources with no handler get passed here
