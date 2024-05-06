@@ -23,3 +23,16 @@ Run debugger for go and python
 
 ### Lazygit themes
 [catppuccin](https://github.com/catppuccin/lazygit/tree/main)
+
+### Configure python envs
+Create a virtual env
+```console
+virtualenv new_env
+```
+
+In the root of the environmet create ``pyrightconfig.json`` file with the following content:
+```json
+{
+  "venvPath": "./bin/python"
+}
+```

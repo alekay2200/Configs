@@ -50,10 +50,20 @@ return {
         capabilities = capabilities
       }
 
+      local util = require("lspconfig/util")
+      local path = util.path
+
       lspconfig.lua_ls.setup(opts)
       lspconfig.tsserver.setup(opts)
       lspconfig.html.setup(opts)
-      lspconfig.pyright.setup(opts)
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
+        filetype = {"pyton"},
+        before_init = function(_, config)
+          default_venv_path = path.join("./bin/python")
+          config.settings.python.pythonPath = default_venv_path
+        end
+      })
       lspconfig.gopls.setup(opts)
       lspconfig.terraformls.setup(opts)
       lspconfig.rust_analyzer.setup(opts)

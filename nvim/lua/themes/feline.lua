@@ -196,7 +196,11 @@ local function feline_dharmx()
       left_sep = "",
       right_sep = "block",
     }
-    
+   
+    component.fileinfo = {
+      provider = { name = "file_info", opts = { type = "relative" } },
+    }
+
     component.file_type = {
       provider = {
         name = "file_type",
