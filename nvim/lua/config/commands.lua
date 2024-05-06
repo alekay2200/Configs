@@ -1,5 +1,4 @@
 local api = vim.api
-local cmd = vim.cmd
 
 function surround_add(opts)
   local char = opts.args
@@ -53,6 +52,20 @@ api.nvim_create_user_command(
     "SD",
     surround_delete,
     { nargs = 1 }
+)
+
+-- Replace only in the selection
+api.nvim_create_user_command(
+  "Sreplace",
+  function(opts)
+    local input = opts.args
+    local search, replace = unpack(vim.split(input, "/"))
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+    local command = string.format("%s,%ss/\\%sV%s/%s/g", start_line, end_line, "%", vim.fn.escape(search, "/"), vim.fn.escape(replace, "/"))
+    api.nvim_command(command)
+  end,
+  { nargs = 1, range = true }
 )
 
 -- `BufferLineCloseRight` - close all visible buffers to the right of the

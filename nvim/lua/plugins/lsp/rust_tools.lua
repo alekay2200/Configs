@@ -2,7 +2,7 @@
 
 return {
   "simrat39/rust-tools.nvim",
-  -- event = { "BufReadPost *.rs" },
+  event = { "BufReadPost *.rs" },
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     local mason_registry = require("mason-registry")
