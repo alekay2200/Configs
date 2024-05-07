@@ -8,6 +8,11 @@ Repositorio para guardar las configuraciones de mis programas
 bew install --cask font-caskaydia-cove-nerd-font
 ```
 
+## Spectre plugin for neovim dependencies (Only MacOS)
+```console
+brew install gnu-sed
+```
+
 ## Install lazygit
 ```console
 brew install lazygit

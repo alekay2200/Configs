@@ -79,3 +79,9 @@ keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
 keymap.set("n", "<leader>dc", dap.continue, {})
 -- Python 
 keymap.set("n", "<leader>ds", dap_python.debug_selection, {})
+
+-- Spectre plugin commands
+-- toggle spectre
+keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
+    desc = "Toggle Spectre"
+})

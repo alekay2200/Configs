@@ -13,6 +13,7 @@ local bufferline = require("plugins.bufferline")
 local vim_visual_multi = require("plugins.vim_visual_multi")
 local align = require("plugins.align")
 local debug = require("plugins.debug")
+local spectre = require("plugins.spectre")
 
 local plugins = {
   nvim_tree,
@@ -29,7 +30,8 @@ local plugins = {
   bufferline,
   vim_visual_multi,
   align,
-  debug
+  debug,
+  spectre
 }
 
 return plugins
