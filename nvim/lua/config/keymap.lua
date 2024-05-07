@@ -82,11 +82,11 @@ keymap.set("n", "<leader>ds", dap_python.debug_selection, {})
 
 -- Spectre plugin commands
 -- toggle spectre
-keymap.set('n', '<leader>s', '<cmd>lua require("spectre").toggle()<CR>', {
+keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
     desc = "Toggle Spectre"
 })
 
 -- search and replace on current file
-keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+keymap.set('n', '<leader>sf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
     desc = "Search on current file"
 })
