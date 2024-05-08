@@ -1,5 +1,6 @@
 local keymap = vim.keymap
 local lsp = vim.lsp
+local diagnostic = vim.diagnostic
 local builtin = require('telescope.builtin')
 local dap = require("dap")
 local diagnostic = vim.diagnostic
@@ -90,3 +91,7 @@ keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
 keymap.set('n', '<leader>sf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
     desc = "Search on current file"
 })
+
+-- Diagnostic movement
+keymap.set("n", "gn", diagnostic.goto_next)
+keymap.set("n", "gb", diagnostic.goto_prev)

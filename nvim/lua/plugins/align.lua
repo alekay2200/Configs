@@ -4,7 +4,6 @@ return {
   lazy = false,
   config = function()
     -- Setup keymaps here 
-    
     -- Aligns to a string with previews
     vim.keymap.set(
       'x',
