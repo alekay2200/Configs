@@ -66,7 +66,13 @@ return {
       })
       lspconfig.gopls.setup(opts)
       lspconfig.terraformls.setup(opts)
-      lspconfig.rust_analyzer.setup(opts)
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities,
+        server = {
+          cmd = { "rust-analyzer" },
+          filetypes = { "rust" },
+        },
+      })
       lspconfig.clangd.setup(opts)
       lspconfig.cmake.setup(opts)
       lspconfig.CMake.setup(opts)

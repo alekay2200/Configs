@@ -68,6 +68,9 @@ api.nvim_create_user_command(
   { nargs = 1, range = true }
 )
 
+-- Run rust-analyzer on standalonefile
+api.nvim_create_user_command("Rust", function() api.nvim_command("RustStartStandaloneServerForBuffer") end, { nargs = 0 })
+
 -- `BufferLineCloseRight` - close all visible buffers to the right of the
 --   current buffer
 -- * `BufferLineCloseLeft` - close all visible buffers to the left of the current
