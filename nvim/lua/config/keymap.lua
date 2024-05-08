@@ -16,18 +16,14 @@ keymap.set("n", "<C-l>", "<C-w>l", { noremap = false, silent = true })
 -- split
 keymap.set("n", "<leader>vs", "<cmd>vertical split<CR>", { noremap = false, silent = true })
 
--- Tabs
--- keymap.set("n", '<S-h>', '<cmd>-tabnext<cr>', { silent = true })
--- keymap.set("n", '<S-l>', '<cmd>+tabnext<cr>', { silent = true })
-
 -- Buffers
 keymap.set("n", '<S-h>', '<cmd>bprev<cr>', { silent = true })
 keymap.set("n", '<S-l>', '<cmd>bnext<cr>', { silent = true })
 keymap.set("n", '<leader>qb', '<cmd>bdelete<CR>', { noremap = true, silent = true }) -- close current buffer
 keymap.set("n", '<leader>ql', '<cmd>BufferLineCloseLeft<CR>', { noremap = true, silent = true }) -- close current buffer
 keymap.set("n", '<leader>qr', '<cmd>BufferLineCloseRight<CR>', { noremap = true, silent = true }) -- close current buffer
--- keymap.set("n", '<S-l>', '<cmd>BufferModeNext<cr>', { silent = true })
--- keymap.set("n", '<S-l>', '<cmd>BufferModePrev<cr>', { silent = true })
+keymap.set("n", '>', '<cmd>BufferLineMoveNext<CR>', { noremap = true, silent = true }) -- close current buffer
+keymap.set("n", '<', '<cmd>BufferLineMovePrev<CR>', { noremap = true, silent = true }) -- close current buffer
 
 -- Terminal mode
 keymap.set("t", '<C-t>', '<C-\\><C-n>', { silent = true })
