@@ -26,7 +26,7 @@ syntax match RuskNumber "\<\d\+\>"
 highlight RuskNumber guifg=#f1b889 ctermfg=216
 
 " Define Stack operations
-syntax keyword StackOps dup dumps swap peek dumpi
+syntax keyword StackOps dup dumps swap peek dumpi drop
 highlight StackOps guifg=#56a6ec ctermfg=75
 
 " Comments
