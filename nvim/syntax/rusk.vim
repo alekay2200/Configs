@@ -13,6 +13,10 @@ highlight Blocks guifg=#bf6dd8 ctermfg=170
 syntax keyword Keyword true false 
 highlight Keyword guifg=#f1b889 ctermfg=216
 
+" Define macro 
+syntax keyword Keyword macro endmacro
+highlight Arithmetic guifg=#9ad9ec ctermfg=153
+
 " Define arithmetic operations 
 syntax match Arithmetic "[+-=<><=>=!=]"
 highlight Arithmetic guifg=#9ad9ec ctermfg=153
