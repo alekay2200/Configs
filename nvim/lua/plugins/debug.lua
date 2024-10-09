@@ -1,6 +1,4 @@
 -- DAP (debug adapter protocol)
-
-
 return {
  "rcarriga/nvim-dap-ui",
   dependencies = {

@@ -1,8 +1,10 @@
+local icon_pack = require("./../themes/icons")
+
 return {
   'akinsho/bufferline.nvim',
   lazy = false,
   version = "*",
-  dependencies =  {'nvim-tree/nvim-web-devicons'},
+  dependencies =  { icon_pack },
   config = function()
     vim.opt.termguicolors = true
 

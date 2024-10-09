@@ -54,7 +54,7 @@ return {
       local path = util.path
 
       lspconfig.lua_ls.setup(opts)
-      lspconfig.tsserver.setup(opts)
+      lspconfig.ts_ls.setup(opts)
       lspconfig.html.setup(opts)
       lspconfig.pyright.setup({
         capabilities = capabilities,

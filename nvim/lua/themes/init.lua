@@ -5,7 +5,8 @@ local onedark = require("themes.onedark")
 
 -- disabling themes that are not going to be used
 catppuccin.lazy = false
-nightfox.lazy = true
+nightfox.lazy = false
+feline.lazy = false
 
 
 local themes = { catppuccin, nightfox, feline, onedark }

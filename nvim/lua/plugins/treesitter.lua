@@ -14,14 +14,17 @@ local config = function()
 			"yaml",
 			"html",
 			"css",
-			"markdown",
+			"terraform",
 			"bash",
 			"lua",
 			"dockerfile",
 			"gitignore",
 			"python",
 			"rust",
-			"go"
+			"go",
+      "gowork",
+      "gosum",
+      "gomod"
 		},
 		auto_install = true,
 		highlight = {

@@ -1,12 +1,10 @@
--- To use web devicons
+local icon_pack = require("themes.icons")
+
 return {
     "nvim-tree/nvim-tree.lua",
     version = "*",
     lazy = false,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      -- "kyazdani42/nvim-web-devicons"
-    },
+    dependencies = { icon_pack },
     config = function()
       require("nvim-tree").setup {
 
@@ -43,11 +41,6 @@ return {
 --       sort_by = "case_sensitive",
 --       view = {
 --         adaptive_size = true,
---         mappings = {
---           list = {
---             { key = "u", action = "dir_up" },
---           },
---         },
 --       },
 --       renderer = {
 --         group_empty = true,

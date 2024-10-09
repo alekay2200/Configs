@@ -13,6 +13,10 @@ highlight Blocks guifg=#bf6dd8 ctermfg=170
 syntax keyword Keyword true false 
 highlight Keyword guifg=#f1b889 ctermfg=216
 
+" Macro
+syntax keyword Macro macro endmacro
+highlight Macro guifg=#f1b889 ctermfg=216
+
 " Define arithmetic operations 
 syntax match Arithmetic "[+-=<><=>=!=]"
 highlight Arithmetic guifg=#9ad9ec ctermfg=153
@@ -22,7 +26,7 @@ syntax match RuskNumber "\<\d\+\>"
 highlight RuskNumber guifg=#f1b889 ctermfg=216
 
 " Define Stack operations
-syntax keyword StackOps dup dumps swap peek dumpi
+syntax keyword StackOps dup dumps swap peek dumpi drop
 highlight StackOps guifg=#56a6ec ctermfg=75
 
 " Comments

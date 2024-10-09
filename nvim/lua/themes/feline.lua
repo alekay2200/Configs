@@ -1,3 +1,5 @@
+local icon_pack = require("themes.icons")
+
 local function feline_dharmx()
     local present, feline = pcall(require, "feline")
     if not present then return end
@@ -621,7 +623,7 @@ return {
   lazy = false,
   dependencies = {
     "gitsigns.nvim",
-    "nvim-web-devicons",
+    icon_pack
   },
   config = feline_Hitesh_Aggarwal
 }

@@ -14,6 +14,10 @@ local vim_visual_multi = require("plugins.vim_visual_multi")
 local align = require("plugins.align")
 local debug = require("plugins.debug")
 local spectre = require("plugins.spectre")
+local markdown = require("plugins.markdown")
+local html_css = require("plugins.html_css")
+local swagger_preview = require("plugins.swagger_preview")
+local termicons = require("plugins.termicons")
 
 local plugins = {
   nvim_tree,
@@ -31,7 +35,11 @@ local plugins = {
   vim_visual_multi,
   align,
   debug,
-  spectre
+  spectre,
+  markdown,
+  html_css,
+  swagger_preview,
+  termicons,
 }
 
 return plugins
