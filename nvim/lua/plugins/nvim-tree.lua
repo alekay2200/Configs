@@ -4,6 +4,7 @@ return {
     "nvim-tree/nvim-tree.lua",
     version = "*",
     lazy = false,
+    priority = 500,
     dependencies = { icon_pack },
     config = function()
       require("nvim-tree").setup {
