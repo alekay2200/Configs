@@ -18,6 +18,7 @@ local markdown = require("plugins.markdown")
 local html_css = require("plugins.html_css")
 local swagger_preview = require("plugins.swagger_preview")
 local termicons = require("plugins.termicons")
+local todos = require("plugins.todos")
 
 local plugins = {
   nvim_tree,
@@ -40,6 +41,7 @@ local plugins = {
   html_css,
   swagger_preview,
   termicons,
+	todos,
 }
 
 return plugins
