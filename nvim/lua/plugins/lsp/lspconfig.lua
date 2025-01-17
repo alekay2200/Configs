@@ -18,7 +18,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "tsserver", -- JavaScript and TypeScript
+          "vtsls", -- JavaScript and TypeScript
           "html",
           "pyright",
           "gopls",
@@ -54,7 +54,7 @@ return {
       local path = util.path
 
       lspconfig.lua_ls.setup(opts)
-      lspconfig.tsserver.setup(opts)
+      lspconfig.vtsls.setup(opts)
       lspconfig.html.setup(opts)
       lspconfig.pyright.setup({
         capabilities = capabilities,
