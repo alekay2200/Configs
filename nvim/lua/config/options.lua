@@ -5,6 +5,11 @@ local diagnostic = vim.diagnostic
 local o = vim.o
 local cmd = vim.cmd
 
+opt.list = true
+opt.encoding = "utf-8"
+
+opt.listchars = { lead = '•', tab = '» ' }
+
 -- Tabs / Indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
