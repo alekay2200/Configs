@@ -8,13 +8,15 @@ local cmd = vim.cmd
 opt.list = true
 opt.encoding = "utf-8"
 
-opt.listchars = { lead = '•', tab = '» ' }
+
+-- opt.listchars = { lead = '•', tab = '» ' }
+opt.listchars = { lead = '·', tab = '» ' }
 
 -- Tabs / Indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
--- opt.expandtab = true
+opt.expandtab = true
 opt.smartindent = true
 opt.wrap = true
 
