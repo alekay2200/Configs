@@ -3,6 +3,8 @@ return {
   lazy = false,
   version = "*",
   config = function()
-    require("toggleterm").setup()
+    require("toggleterm").setup({
+      size = vim.o.lines * 0.5
+    })
  end
 }

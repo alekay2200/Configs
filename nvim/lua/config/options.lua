@@ -1,5 +1,6 @@
 local opt = vim.opt
 local fn = vim.fn
+local bo = vim.bo
 local api = vim.api
 local diagnostic = vim.diagnostic
 local o = vim.o
@@ -19,6 +20,14 @@ opt.softtabstop = 2
 opt.expandtab = true
 opt.smartindent = true
 opt.wrap = true
+
+-- -- Use tabs in go files
+-- api.nvim_create_autocmd("FileType", {
+--     pattern = "go",
+--     callback = function()
+--         opt.expandtab = false
+--     end,
+-- })
 
 -- Cursor
 opt.guicursor =
@@ -45,7 +54,7 @@ opt.hidden = true
 opt.errorbells = false
 opt.swapfile = false
 opt.backup = false
-opt.undodir = vim.fn.expand("~/.vim/undodir")
+opt.undodir = fn.expand("~/.vim/undodir")
 opt.undofile = true
 opt.backspace = "indent,eol,start"
 opt.splitright = true
@@ -79,3 +88,17 @@ api.nvim_create_autocmd("ColorScheme", {
 	end
 })
 fn.sign_define('DapBreakpoint', {text='', texthl='red', linehl='DapBreakpoint', numhl='DapBreakpoint'})
+
+-- Set expandtab to false to some filetypes: go, makefile
+api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*",
+    callback = function()
+      if bo.filetype == "go" then
+        opt.expandtab = false
+      elseif bo.filetype == "make" then
+        opt.expandtab = false
+      else
+        opt.expandtab = true
+      end
+    end
+})

@@ -60,7 +60,7 @@ return {
         capabilities = capabilities,
         filetype = {"pyton"},
         before_init = function(_, config)
-          default_venv_path = path.join("./bin/python")
+          local default_venv_path = path.join("./bin/python")
           config.settings.python.pythonPath = default_venv_path
         end
       })

@@ -5,7 +5,6 @@ local surround = require("plugins.surround")
 local lspconfig = require("plugins.lsp.lspconfig")
 local telescope = require("plugins.telescope")
 local gitsigns = require("plugins.gitsigns")
-local fugitive = require("plugins.fugitive")
 local cmp = require("plugins.cmp")
 local toggleterm = require("plugins.toggleterm")
 local lazygit = require("plugins.lazygit")
@@ -28,7 +27,6 @@ local plugins = {
   lspconfig,
   telescope,
   gitsigns,
-  fugitive,
   cmp,
   toggleterm,
   lazygit,
@@ -41,7 +39,7 @@ local plugins = {
   html_css,
   swagger_preview,
   termicons,
-	todos,
+  todos,
 }
 
 return plugins

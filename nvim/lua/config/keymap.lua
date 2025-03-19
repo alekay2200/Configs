@@ -29,8 +29,8 @@ keymap.set("n", '<', '<cmd>BufferLineMovePrev<CR>', { noremap = true, silent = t
 keymap.set("t", '<C-t>', '<C-\\><C-n>', { silent = true })
 -- keymap.set("t", '<leader>g', '<cmd>LazyGit<CR>', { silent = true })
 keymap.set("n", "<leader>g", "<cmd>LazyGit<CR>", {noremap = true, silent = true})
-keymap.set("n", "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true})
-keymap.set("t", "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true})
+keymap.set("n", "<C-\\>", "<cmd>ToggleTerm direction=horizontal<CR>", {noremap = true, silent = true})
+keymap.set("t", "<C-\\>", "<cmd>ToggleTerm direction=horizontal<CR>", {noremap = true, silent = true})
 
 -- buffers 
 -- keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
@@ -45,7 +45,7 @@ keymap.set("n", "<leader>dd", ":NvimTreeToggle<CR>", { noremap = true, silent = 
 
 -- Comments
 -- Not working I dont know why :)
-keymap.set("n", "<C-/>", "gcc", { noremap = false, silent = true})
+keymap.set("n", "<C-/>", "gcc", { noremap = false, silent = true })
 
 -- LSP config --
 -- shows a floating window with the function where the cursor is hovered 
@@ -60,6 +60,8 @@ keymap.set("n", "gr", lsp.buf.references, {})
 keymap.set("n", "gbb", "<C-t>", { noremap = true, silent = true })
 -- Show the list of code actions (the linter tell you to solve something in your code)
 keymap.set("n", "<leader>ca", lsp.buf.code_action, {})
+-- Refactor names
+keymap.set("n", "<leader>r", lsp.buf.rename, { noremap = true })
 
 
 -- Telescope keymaps
@@ -80,7 +82,7 @@ keymap.set("n", "<leader>ds", dap_python.debug_selection, {})
 -- Spectre plugin commands
 -- toggle spectre
 keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
-    desc = "Toggle Spectre"
+    desc = "Toggle Spectre",
 })
 
 -- search and replace on current file
@@ -91,3 +93,5 @@ keymap.set('n', '<leader>sf', '<cmd>lua require("spectre").open_file_search({sel
 -- Diagnostic movement
 keymap.set("n", "gn", diagnostic.goto_next)
 keymap.set("n", "gb", diagnostic.goto_prev)
+
+-- S

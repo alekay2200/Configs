@@ -6,7 +6,6 @@ function surround_add(opts)
   api.nvim_input(key_sequence)
 end
 
-
 function surround_change(opts)
   input = opts.args
   if #input ~= 2 then return end
