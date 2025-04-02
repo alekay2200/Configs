@@ -102,3 +102,12 @@ api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
       end
     end
 })
+
+-- Resize nvimtree if the window was resized
+api.nvim_create_autocmd({ "VimResized" }, {
+  group = api.nvim_create_augroup("NvimTreeResize", { clear = true }),
+  callback = function()
+    local width = api.nvim_get_option("columns")
+    cmd("NvimTreeResize " .. width)
+  end,
+})
