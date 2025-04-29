@@ -619,7 +619,7 @@ local function feline_Hitesh_Aggarwal()
 end
 
 return {
-  "freddiehaddad/feline.nvim",
+  "famiu/feline.nvim",
   lazy = false,
   dependencies = {
     "gitsigns.nvim",

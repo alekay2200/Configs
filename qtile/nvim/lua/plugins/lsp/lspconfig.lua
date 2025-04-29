@@ -75,7 +75,7 @@ return {
       })
       lspconfig.clangd.setup(opts)
       lspconfig.cmake.setup(opts)
-      lspconfig.CMake.setup(opts)
+      lspconfig.cmake.setup(opts)
       lspconfig.dockerls.setup(opts)
       lspconfig.jsonls.setup(opts)
       lspconfig.marksman.setup(opts)
