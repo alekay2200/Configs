@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Using nitrogen to set wallpaper on startup
-# nitrogen --restore (not working)
+nitrogen --restore
 
 ## Pipewire audio backend
 pipewire &
