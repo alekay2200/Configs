@@ -4,10 +4,8 @@ local comment = require("plugins.comment")
 local surround = require("plugins.surround")
 local lspconfig = require("plugins.lsp.lspconfig")
 local telescope = require("plugins.telescope")
-local gitsigns = require("plugins.gitsigns")
 local cmp = require("plugins.cmp")
 local toggleterm = require("plugins.toggleterm")
-local lazygit = require("plugins.lazygit")
 local bufferline = require("plugins.bufferline")
 local vim_visual_multi = require("plugins.vim_visual_multi")
 local align = require("plugins.align")
@@ -19,6 +17,9 @@ local swagger_preview = require("plugins.swagger_preview")
 local termicons = require("plugins.termicons")
 local todos = require("plugins.todos")
 
+-- array with all git plugins
+local git_plugins = require("plugins.git")
+
 local plugins = {
   nvim_tree,
   treesitter,
@@ -26,10 +27,8 @@ local plugins = {
   surround,
   lspconfig,
   telescope,
-  gitsigns,
   cmp,
   toggleterm,
-  lazygit,
   bufferline,
   vim_visual_multi,
   align,
@@ -41,5 +40,7 @@ local plugins = {
   termicons,
   todos,
 }
+
+plugins = table.move(git_plugins, 1, #git_plugins, #plugins + 1, plugins)
 
 return plugins

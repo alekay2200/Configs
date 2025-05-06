@@ -9,7 +9,6 @@ local cmd = vim.cmd
 opt.list = true
 opt.encoding = "utf-8"
 
-
 -- opt.listchars = { lead = '•', tab = '» ' }
 opt.listchars = { lead = '·', tab = '» ' }
 
@@ -111,3 +110,22 @@ api.nvim_create_autocmd({ "VimResized" }, {
     cmd("NvimTreeResize " .. width)
   end,
 })
+
+-- git conflict plugin
+api.nvim_create_autocmd("ColorScheme", {
+	pattern = "*",
+	desc = "prevent colorscheme clears self-defined DAP icon colors.",
+	callback = function()
+    api.nvim_set_hl(0, "DiffAdd", { ctermbg = 0, bg = "#405d7e" })
+    api.nvim_set_hl(0, "DiffText", { ctermbg = 0, bg = "#314753" })
+	end
+})
+
+-- api.nvim_create_autocmd("GitConflictColorScheme", {
+-- 	pattern = "*",
+-- 	desc = "Git conflict highlights.",
+-- 	callback = function()
+--     api.nvim_set_hl(0, "DiffAdd", { ctermbg = 0, guibg = "#405d7e" })
+--     api.nvim_set_hl(0, "DiffText", { ctermbg = 0, guibg = "#314753" })
+--   end
+-- })

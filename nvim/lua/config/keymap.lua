@@ -27,8 +27,6 @@ keymap.set("n", '<', '<cmd>BufferLineMovePrev<CR>', { noremap = true, silent = t
 
 -- Terminal mode
 keymap.set("t", '<C-t>', '<C-\\><C-n>', { silent = true })
--- keymap.set("t", '<leader>g', '<cmd>LazyGit<CR>', { silent = true })
-keymap.set("n", "<leader>g", "<cmd>LazyGit<CR>", {noremap = true, silent = true})
 keymap.set("n", "<C-\\>", "<cmd>ToggleTerm direction=horizontal<CR>", {noremap = true, silent = true})
 keymap.set("t", "<C-\\>", "<cmd>ToggleTerm direction=horizontal<CR>", {noremap = true, silent = true})
 

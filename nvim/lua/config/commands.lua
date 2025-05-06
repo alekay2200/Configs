@@ -67,6 +67,14 @@ api.nvim_create_user_command(
   { nargs = 1, range = true }
 )
 
+api.nvim_create_user_command(
+  "Problems",
+  function()
+    api.nvim_command("lua vim.diagnostic.setqflist()")
+  end,
+  { nargs = 0, range = false }
+)
+
 -- Run rust-analyzer on standalonefile
 api.nvim_create_user_command("Rust", function() api.nvim_command("RustStartStandaloneServerForBuffer") end, { nargs = 0 })
 
