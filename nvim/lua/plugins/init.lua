@@ -16,6 +16,7 @@ local html_css = require("plugins.html_css")
 local swagger_preview = require("plugins.swagger_preview")
 local termicons = require("plugins.termicons")
 local todos = require("plugins.todos")
+local colorized = require("plugins.colorized")
 
 -- array with all git plugins
 local git_plugins = require("plugins.git")
@@ -39,6 +40,7 @@ local plugins = {
   swagger_preview,
   termicons,
   todos,
+  colorized
 }
 
 plugins = table.move(git_plugins, 1, #git_plugins, #plugins + 1, plugins)
