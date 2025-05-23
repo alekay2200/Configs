@@ -31,9 +31,9 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
-require "commands"
+require "custom.commands"
 
-require "configs.plugins"
+require "custom.configs.nvim-tree"
 
 -- require "plugins.config.init"
 
