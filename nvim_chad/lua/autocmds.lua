@@ -1,4 +1,9 @@
+require "nvchad.autocmds"
+
 local api = vim.api
+local bo = vim.bo
+local opt = vim.opt
+local cmd = vim.cmd
 
 -- Buffer Custom commands
 -- Next buffer
@@ -51,3 +56,27 @@ api.nvim_create_user_command(
     function() require("nvchad.tabufline").move_buf(-1) end,
     { nargs = 0 }
 )
+
+
+-- Disable expandtab option for go files
+api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*",
+    callback = function()
+      if bo.filetype == "go" then
+        opt.expandtab = false
+      elseif bo.filetype == "make" then
+        opt.expandtab = false
+      else
+        opt.expandtab = true
+      end
+    end
+})
+
+-- Resize nvimtree if the window was resized
+api.nvim_create_autocmd({ "VimResized" }, {
+  group = api.nvim_create_augroup("NvimTreeResize", { clear = true }),
+  callback = function()
+    local width = vim.go.columns
+    cmd("NvimTreeResize " .. width)
+  end,
+})
