@@ -11,3 +11,12 @@
 # Requirements
 - ripgrep
 - rust-analyzer
+
+# MACOS
+After installing disable quarantine
+```console
+xattr -r -d com.apple.quarantine ~/.local/share/nvim
+
+# Path where nvim is installed
+xattr -r -d com.apple.quarantine ~/Programs/nvim/lib/nvim
+```
