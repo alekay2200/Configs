@@ -193,4 +193,11 @@ return {
     end,
     ft = { "markdown" },
   },
+
+  {
+    "vinnymeller/swagger-preview.nvim",
+    cmd = { "SwaggerPreview", "SwaggerPreviewStop", "SwaggerPreviewToggle" },
+    build = "npm i",
+    config = true,
+  }
 }
