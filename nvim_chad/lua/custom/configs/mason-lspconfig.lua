@@ -2,7 +2,8 @@ local lspServers = {
   "gopls",
   "lua_ls",
   "pyright",
-  "clangd"
+  "clangd",
+  "terraformls",
 }
 
 return lspServers
