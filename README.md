@@ -27,10 +27,34 @@ bew install --cask font-caskaydia-cove-nerd-font
 brew install gnu-sed
 ```
 
+## Install neovim-remote
+```console
+pip install neovim-remote
+```
+
 ## Install lazygit
 ```console
 brew install lazygit
 ```
+
+## Lazygit: use nvim for merge conflicts
+Requires ``neovim-remote`` and ``lazygit``
+
+Update ``./zshrc``
+```console
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
+fi
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+    export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+else
+    export VISUAL="nvim"
+    export EDITOR="nvim"
+fi
+```
+
 
 Run debugger on cargo project
 - Set breakpoint <leader>db
