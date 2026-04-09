@@ -22,6 +22,9 @@ Repositorio para guardar las configuraciones de mis programas
 bew install --cask font-caskaydia-cove-nerd-font
 ```
 
+## Install termicons
+[termicons](https://termicons.mskelton.dev/)
+
 ## Spectre plugin for neovim dependencies (Only MacOS)
 ```console
 brew install gnu-sed
