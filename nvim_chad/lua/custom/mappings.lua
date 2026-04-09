@@ -79,3 +79,37 @@ map('n', '<leader>tr', '<cmd>lua require("neotest").run.run()<CR>', {
 map('n', '<leader>cc', funcs.OpenClaudeCodeTerminal, {
     desc = "Open in split view a new window with claude code",
 })
+
+-- DAP
+map("n", "<leader>do",
+  function()
+    require("dapui").open()
+  end,
+  {
+  desc = "Close debug menu"
+})
+
+map("n", "<leader>db",  function() require("dap").toggle_breakpoint() end, {
+  desc = "Toggle breakpoint"
+})
+
+map("n", "<leader>dc",  function() require("dap").continue() end, {
+  desc = "DAP Continue"
+})
+
+map("n", "<leader>dn",  function() require("dap").step_over() end, {
+  desc = "DAP step over"
+})
+
+map("n", "<leader>di",  function() require("dap").step_into() end, {
+  desc = "DAP step into"
+})
+
+map("n", "<leader>dq",
+  function()
+    require("dap").terminate()
+    require("dapui").close()
+  end,
+  {
+  desc = "Close debug menu"
+})

@@ -15,7 +15,7 @@ opt.smartindent = true
 opt.wrap = true
 
 -- Show float window with diagnostic information for current line
-cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- Cursor
 opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
