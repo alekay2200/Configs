@@ -2,7 +2,7 @@
 local languages = {
     "vim", "lua", "vimdoc",
     "html", "css", "rust", "go",
-    "python",
+    "python", "terraform", "yaml"
 }
 
 return languages
