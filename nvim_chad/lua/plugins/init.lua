@@ -301,4 +301,32 @@ return {
       dap.listeners.before.event_exited.dapui_config     = function() ui.close() end
     end,
   },
+
+  -- AstroJS tree-sitter plugin
+  {
+    "virchau13/tree-sitter-astro",
+    lazy = true,
+    ft = {
+      "astro",
+    },
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "html",
+      "xml",
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "astro",
+      "vue",
+      "svelte",
+    },
+    lazy = true,
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
+  }
 }

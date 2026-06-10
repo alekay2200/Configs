@@ -18,3 +18,13 @@ lspconfig.gopls.setup({
     filetypes = {"go", "gomod", "gowork", "gotmpl"},
     root_dir = util.root_pattern("go.work", "go.mod", ".git")
 })
+
+
+-- Astro
+lspconfig.astro.setup({
+  init_options = {
+    typescript = {
+      tsdk = vim.fn.stdpath("data") .. "/mason/packages/typescript-language-server/node_modules/typescript/lib"
+    }
+  }
+})
