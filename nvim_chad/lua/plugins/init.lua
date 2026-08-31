@@ -146,7 +146,7 @@ return {
           _G.LAZYGIT_LOADED = false
           vim.g.lazygit_opened = 0
 
-          if not target_win then
+          if not target_win or not vim.api.nvim_win_is_valid(target_win) then
             vim.cmd("vsplit")
             target_win = vim.api.nvim_get_current_win()
           end
