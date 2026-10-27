@@ -7,7 +7,14 @@ return {
     -- Los servidores se habilitan solos via mason-lspconfig (automatic_enable),
     -- ver lua/plugins/mason.lua. Aqui solo van los que necesitan opciones extra.
     -- Ver :h vim.lsp.config
-    vim.diagnostic.config { virtual_text = false }
+    -- Sin texto virtual en la linea: el mensaje sale en el float del CursorHold
+    -- (ver lua/config/autocmds.lua). Los signos del gutter los deja defaults().
+    vim.diagnostic.config {
+      virtual_text = false,
+      virtual_lines = false,
+      underline = true,
+      float = { border = "rounded", source = true },
+    }
 
     local lspconfig = require "lspconfig"
     local util = require "lspconfig.util"

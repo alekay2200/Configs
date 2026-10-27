@@ -13,7 +13,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Un archivo por plugin: lazy importa automaticamente todo lua/plugins/*.lua
-require("lazy").setup({ { import = "plugins" } }, require "config.lazy")
+require("lazy").setup({
+  -- Base de NvChad primero: sus specs quedan como base y las nuestras las sobreescriben
+  { "NvChad/NvChad", lazy = false, branch = "v2.5", import = "nvchad.plugins" },
+  { import = "plugins" },
+}, require "config.lazy")
 
 -- tema (cache de base46, generado por NvChad)
 dofile(vim.g.base46_cache .. "defaults")
